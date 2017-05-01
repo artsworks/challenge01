@@ -1,0 +1,11 @@
+<h2>List of all the cats in alphabetical order clustered by the gender of their owner</h2>
+
+<h3>Male</h3>
+<ul ng-repeat="owner in ctrl.owners | filter: gender='Male'">
+    <li ng-repeat="pet in owner.pets | filter: type='cat' | orderBy: name">{{pet.name}}</li>
+</ul>
+
+<h3>Female</h3>
+<ul ng-repeat="owner in ctrl.owners | filter: gender='Female'">
+    <li ng-repeat="pet in owner.pets | filter: type='cat' | orderBy: name">{{pet.name}}</li>
+</ul>
